@@ -44,9 +44,4 @@ public class WishListId implements Serializable{
 	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	
-	
-	
-	
-
 }

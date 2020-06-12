@@ -12,9 +12,6 @@ public class WishlistEntity {
 	@EmbeddedId
 	private WishListId id;
 
-	
-	
-    
 	@Override
 	public String toString() {
 		return "WishlistEntity [id=" + id + "]";
@@ -36,12 +33,5 @@ public class WishlistEntity {
 	public void setId(WishListId id) {
 		this.id = id;
 	}
-
-
-    
 	
-	
-	
-	
-
 }

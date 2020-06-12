@@ -74,13 +74,4 @@ public class Buyer {
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

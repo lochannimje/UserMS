@@ -30,8 +30,4 @@ public class Wishlist {
 	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	
-	
-	
-
 }

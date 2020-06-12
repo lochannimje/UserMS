@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import team12.user.dto.Seller;
-import team12.user.entity.BuyerEntity;
 import team12.user.entity.SellerEntity;
 import team12.user.exception.AlreadyEmailIdExistException;
 import team12.user.exception.AlreadyPhoneNumberExistException;
@@ -36,7 +35,7 @@ public class SellerService {
 	}
 	
 	private void validateSeller(Seller seller) throws UserException {
-		// TODO Auto-generated method stub
+
 		
 		if(!isValidName(seller.getName()))
 			throw new InvalidNameException("BuyerRegistration.INVALID_NAME");
@@ -54,7 +53,7 @@ public class SellerService {
 	}
 
 	private boolean isAlreadyEmailIdExist(String email) {
-		// TODO Auto-generated method stub
+		
 		SellerEntity sellerEntity=sellerRepository.findByEmail(email);
 		if (sellerEntity!=null)
 			return false;
@@ -62,7 +61,7 @@ public class SellerService {
 	}
 
 	private boolean isAlreadyPhoneNumberExist(String phoneNumber) {
-		// TODO Auto-generated method stub
+		
 		SellerEntity sellerEntity=sellerRepository.findByPhoneNumber(phoneNumber);
 		if (sellerEntity!=null)
 			return false;
@@ -70,22 +69,22 @@ public class SellerService {
 	}
 
 	private boolean isvalidPassword(String password) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{7,20}$",password);
 	}
 
 	private boolean isValidPhoneNumber(String phoneNumber) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^\\d{10}$", phoneNumber);
 	}
 
 	private boolean isValidEmail(String email) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$",email);
 	}
 
 	private boolean isValidName(String name) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^[a-zA-Z]+[-a-zA-Z\\s]+([-a-zA-Z]+)$", name);
 	}
 	

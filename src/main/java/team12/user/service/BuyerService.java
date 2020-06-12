@@ -7,10 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
+
 import org.springframework.stereotype.Service;
 
-import team12.user.controller.BuyerController;
 import team12.user.dto.Buyer;
 import team12.user.entity.BuyerEntity;
 import team12.user.exception.AlreadyEmailIdExistException;
@@ -32,8 +31,7 @@ import team12.user.repository.BuyerRepository;
 public class BuyerService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(BuyerService.class);
-	@Autowired
-	private Environment env;
+
 	@Autowired
 	BuyerRepository buyerRepository;
 
@@ -68,7 +66,7 @@ public class BuyerService {
 	}
 
 	private boolean isAlreadyEmailIdExist(String email) {
-		// TODO Auto-generated method stub
+		
 		BuyerEntity buyerEntity=buyerRepository.findByEmail(email);
 		if (buyerEntity!=null)
 			return false;
@@ -76,7 +74,7 @@ public class BuyerService {
 	}
 
 	private boolean isAlreadyPhoneNumberExist(String phoneNumber) {
-		// TODO Auto-generated method stub
+		
 		BuyerEntity buyerEntity=buyerRepository.findByPhoneNumber(phoneNumber);
 		if (buyerEntity!=null)
 			return false;
@@ -84,22 +82,22 @@ public class BuyerService {
 	}
 
 	private boolean isvalidPassword(String password) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{7,20}$",password);
 	}
 
 	private boolean isValidPhoneNumber(String phoneNumber) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^\\d{10}$", phoneNumber);
 	}
 
 	private boolean isValidEmail(String email) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$",email);
 	}
 
 	private boolean isValidName(String name) {
-		// TODO Auto-generated method stub
+		
 		return Pattern.matches("^[a-zA-Z]+[-a-zA-Z\\s]+([-a-zA-Z]+)$", name);
 	}
 	

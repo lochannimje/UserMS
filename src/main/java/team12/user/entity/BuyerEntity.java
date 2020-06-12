@@ -44,10 +44,6 @@ public class BuyerEntity {
 	public BuyerEntity() {
 		super();
 	}
-	
-	
-
-
 
 	@Override
 	public String toString() {
@@ -55,22 +51,13 @@ public class BuyerEntity {
 				+ phoneNumber + ", password=" + password + ", isPrivileged=" + isPrivileged + ", rewardPoints="
 				+ rewardPoints + ", isActive=" + isActive + "]";
 	}
-
-
-
-
-
 	public int getBuyerId() {
 		return buyerId;
 	}
 
-
-
 	public void setBuyerId(int buyerId) {
 		this.buyerId = buyerId;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -154,7 +141,4 @@ public class BuyerEntity {
 		this.isActive = isActive;
 	}
 	
-	
-	
-
 }
