@@ -3,5 +3,5 @@ projectKey=team12:UserMS
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.8621
 dashboardUrl=https://sonarcloud.io/dashboard?id=team12%3AUserMS
-ceTaskId=AXKngE694fSif5zYCyFl
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXKngE694fSif5zYCyFl
+ceTaskId=AXKn_JevK6fcTQJKXzEE
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXKn_JevK6fcTQJKXzEE
